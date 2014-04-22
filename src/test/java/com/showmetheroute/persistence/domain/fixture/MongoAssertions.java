@@ -16,7 +16,7 @@ public class MongoAssertions {
     return assertions;
   }
 
-  public CollectionAssertions collections(String name) {
+  public CollectionAssertions collection(String name) {
     return new CollectionAssertions(name);
   }
 

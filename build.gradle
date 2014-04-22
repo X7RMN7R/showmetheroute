@@ -6,4 +6,6 @@ repositories {
 
 dependencies {
   compile 'org.springframework.data:spring-data-mongodb:1.2.3.RELEASE'
+
+  testCompile 'junit:junit:4.+'
 }
