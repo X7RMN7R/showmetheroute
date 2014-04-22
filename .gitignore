@@ -1,0 +1,13 @@
+# Gradle repository
+.gradle/
+
+# Build directory
+build/
+
+# Classes
+*.class
+
+# Archives
+*.jar
+*.war
+
