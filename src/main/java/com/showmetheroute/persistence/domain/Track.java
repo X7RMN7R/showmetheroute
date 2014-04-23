@@ -13,18 +13,18 @@ public class Track {
   @Id
   private String id;
   
-  private List<WayPoint> wayPointList;
+  private List<WayPoint> wayPoints;
 
   public Track() {
-    this.wayPointList = new ArrayList<WayPoint>();
+    this.wayPoints = new ArrayList<WayPoint>();
   }
 
-  public List<WayPoint> getWayPointList() {
-    return wayPointList;
+  public List<WayPoint> getWayPoints() {
+    return wayPoints;
   }
 
-  public void setWayPointList(List<WayPoint> wayPointList) {
-    this.wayPointList = wayPointList;
+  public void setWayPoints(List<WayPoint> wayPoints) {
+    this.wayPoints = wayPoints;
   }
 
   public String getId() {
