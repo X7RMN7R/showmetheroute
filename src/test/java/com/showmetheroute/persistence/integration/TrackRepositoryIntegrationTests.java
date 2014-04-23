@@ -1,7 +1,5 @@
 package com.showmetheroute.persistence.integration;
 
-import WayPointRepository;
-
 import com.showmetheroute.config.MongoConfiguration;
 import com.showmetheroute.persistence.repository.TrackRepository;
 import org.junit.After;
