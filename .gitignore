@@ -15,3 +15,7 @@ build/
 /.project
 /.classpath
 /.settings/
+
+# gradle config
+gradle.properties
+

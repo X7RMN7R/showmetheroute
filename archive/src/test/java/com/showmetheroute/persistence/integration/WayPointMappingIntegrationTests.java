@@ -32,8 +32,8 @@ public class WayPointMappingIntegrationTests {
     mongo.insert(standardWayPoint());
     assertEquals(1, mongo.getCollection("waypoint").count());
     assertTrue(usingMongo(mongo).collection("waypoint").hasIndexOn("_id"));
-    assertTrue(usingMongo(mongo).collection("waypoint").hasIndexOn("latitude"));
-    assertTrue(usingMongo(mongo).collection("waypoint").hasIndexOn("longitude"));
+    //assertTrue(usingMongo(mongo).collection("waypoint").hasIndexOn("latitude"));
+    //assertTrue(usingMongo(mongo).collection("waypoint").hasIndexOn("longitude"));
   }
 
   @Test

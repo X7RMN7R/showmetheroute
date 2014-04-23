@@ -1,21 +1,21 @@
 package com.showmetheroute.persistence.domain;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+//import org.springframework.data.annotation.Id;
+//import org.springframework.data.mongodb.core.index.Indexed;
+//import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "waypoint")
+//@Document(collection = "waypoint")
 public class WayPoint {
-	@Id
+	//@Id
 	private String id;
 
-	@Field("latitude")
-	@Indexed
+	//@Field("latitude")
+	//@Indexed
 	private double latitude;
 
-	@Field("longitude")
-	@Indexed
+	//@Field("longitude")
+	//@Indexed
 	private double longitude;
 	
 	public String getId() {

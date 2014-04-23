@@ -6,7 +6,10 @@ repositories {
 }
 
 dependencies {
+  runtime 'org.springframework:spring-core:3.2.3.RELEASE'
   compile 'org.springframework.data:spring-data-mongodb:1.2.3.RELEASE'
+  compile 'cglib:cglib:2.2.2'
 
   testCompile 'junit:junit:4.+'
+  testCompile 'org.springframework:spring-test:3.2.3.RELEASE'
 }
