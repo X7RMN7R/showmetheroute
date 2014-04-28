@@ -1,19 +1,39 @@
+buildscript {
+  repositories {
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    mavenLocal()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+  } 
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'smtr-spring-boot'
+  version =  '0.1.0'
+}
 
 repositories {
   mavenCentral()
+  maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
   runtime 'org.springframework:spring-core:3.2.3.RELEASE'
+  runtime 'org.springframework.data:spring-data-commons:1.7.1.RELEASE'
   
-  compile 'org.slf4j:slf4j-api:1.7.5'
-  runtime 'org.slf4j:slf4j-jdk14:1.7.5'
+  //compile 'org.slf4j:slf4j-api:1.7.5'
+  //runtime 'org.slf4j:slf4j-jdk14:1.7.5'
     
   compile 'org.springframework.data:spring-data-mongodb:1.2.3.RELEASE'
   compile 'cglib:cglib:2.2.2'
 
   testCompile 'junit:junit:4.+'
   testCompile 'org.springframework:spring-test:3.2.3.RELEASE'
+
+  compile 'org.springframework.boot:spring-boot-starter-web'
 }
