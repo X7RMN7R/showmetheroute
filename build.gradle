@@ -25,7 +25,6 @@ repositories {
 dependencies {
   runtime 'org.springframework:spring-core:4.0.3.RELEASE'
   runtime 'org.springframework.data:spring-data-commons:1.7.1.RELEASE'
-  //runtime 'org.springframework.data:spring-data-commons-core:1.4.1.RELEASE'
   
   //compile 'org.slf4j:slf4j-api:1.7.5'
   //runtime 'org.slf4j:slf4j-jdk14:1.7.5'
