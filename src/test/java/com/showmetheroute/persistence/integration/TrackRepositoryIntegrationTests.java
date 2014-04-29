@@ -17,7 +17,7 @@ import static junit.framework.TestCase.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {MongoConfiguration.class})
 public class TrackRepositoryIntegrationTests {
-@Autowired
+  @Autowired
   TrackRepository trackRepository;
 
   @Autowired
