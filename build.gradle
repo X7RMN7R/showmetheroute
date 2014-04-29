@@ -23,17 +23,18 @@ repositories {
 }
 
 dependencies {
-  runtime 'org.springframework:spring-core:3.2.3.RELEASE'
-  //runtime 'org.springframework.data:spring-data-commons:1.7.1.RELEASE'
+  runtime 'org.springframework:spring-core:4.0.3.RELEASE'
+  runtime 'org.springframework.data:spring-data-commons:1.7.1.RELEASE'
+  //runtime 'org.springframework.data:spring-data-commons-core:1.4.1.RELEASE'
   
   //compile 'org.slf4j:slf4j-api:1.7.5'
   //runtime 'org.slf4j:slf4j-jdk14:1.7.5'
     
-  compile 'org.springframework.data:spring-data-mongodb:1.2.3.RELEASE'
+  compile 'org.springframework.data:spring-data-mongodb:1.4.1.RELEASE'
   compile 'cglib:cglib:2.2.2'
 
   testCompile 'junit:junit:4.+'
-  testCompile 'org.springframework:spring-test:3.2.3.RELEASE'
+  testCompile 'org.springframework:spring-test:4.0.3.RELEASE'
 
   compile 'org.springframework.boot:spring-boot-starter-web'
 }
