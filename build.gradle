@@ -36,6 +36,8 @@ dependencies {
   testCompile 'org.springframework:spring-test:4.0.3.RELEASE'
 
   compile 'org.springframework.boot:spring-boot-starter-web'
+
+  compile 'org.mockito:mockito-all:1.9.5'
 }
 
 test {
