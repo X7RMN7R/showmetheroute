@@ -10,6 +10,9 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 public class TrackControllerTest {
   @Mock
   private TrackRepository trackRepository;
@@ -25,5 +28,10 @@ public class TrackControllerTest {
     mockMvc = MockMvcBuilders.standaloneSetup(trackController).build();
   }
 
+  @Test
+  public void testFindAllTracksIsNull() throws Exception {
+    when(trackRepository.findAll()).thenReturn(null);
 
+    mockMvc.perform(get("/tracks")).andExpect(status().isOk());
+  }
 }

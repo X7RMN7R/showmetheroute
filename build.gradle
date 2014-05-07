@@ -41,5 +41,5 @@ dependencies {
 }
 
 test {
-  exclude 'com/showmetheroute/service/**'
+  exclude 'com/showmetheroute/service/hello/**'
 }
