@@ -1,0 +1,12 @@
+[
+    {
+      "id":"wp1",
+      "latitude":42.21806,
+      "longitude":-2.55278
+    },
+    {
+      "id":"wp2",
+      "latitude":42.390834,
+      "longitude":-2.485556
+    }
+  ]

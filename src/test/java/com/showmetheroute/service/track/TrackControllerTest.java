@@ -1,6 +1,7 @@
 package com.showmetheroute.service.track;
 
 import static com.showmetheroute.persistence.domain.fixture.PersistenceFixture.standardTrackJSON;
+import static com.showmetheroute.persistence.domain.fixture.PersistenceFixture.standardWaypointsJSON;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
@@ -112,21 +113,36 @@ public class TrackControllerTest {
     when (trackRepository.findOne("TRACK_ID")).thenReturn(new Track());
     when(trackRepository.save(any(Track.class))).thenReturn(new Track());
     
-    mockMvc.perform(put("/tracks/{id}/waypoints", "TRACK_ID")).andExpect(status().isCreated());
+    mockMvc.perform(put("/tracks/{id}/waypoints", "TRACK_ID")
+        .content(standardWaypointsJSON())
+        .contentType(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON))
+      .andDo(print())
+      .andExpect(status().isCreated());
   }
   
   @Test
   public void testUpdateUnfoundTrackWaypoints() throws Exception {
     when (trackRepository.findOne("TRACK_ID")).thenReturn(null);
     
-    mockMvc.perform(put("/tracks/{id}/waypoints", "TRACK_ID")).andExpect(status().isNotFound());
+    mockMvc.perform(put("/tracks/{id}/waypoints", "TRACK_ID")
+        .content(standardWaypointsJSON())
+        .contentType(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON))
+      .andDo(print())
+      .andExpect(status().isNotFound());
   }
   
   @Test
   public void testTrackWaypointsUpdateFails() throws Exception {
-    when (trackRepository.findOne("TRACK_ID")).thenReturn(null);
+    when (trackRepository.findOne("TRACK_ID")).thenReturn(new Track());
     when(trackRepository.save(any(Track.class))).thenReturn(null);
     
-    mockMvc.perform(put("/tracks/{id}/waypoints", "TRACK_ID")).andExpect(status().isNotAcceptable());
+    mockMvc.perform(put("/tracks/{id}/waypoints", "TRACK_ID")
+        .content(standardWaypointsJSON())
+        .contentType(MediaType.APPLICATION_JSON)
+        .accept(MediaType.APPLICATION_JSON))
+      .andDo(print())
+      .andExpect(status().isNotAcceptable());
   }
 }

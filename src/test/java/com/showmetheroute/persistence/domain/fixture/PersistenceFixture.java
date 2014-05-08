@@ -28,17 +28,19 @@ public class PersistenceFixture {
     return track;
   }
   
-//  public static String standardTrackJSON() {
-//    return "{ \"_id\" : \"First track\", \"_class\" : " 
-//          + "\"com.showmetheroute.persistence.domain.Track\", "
-//          + "\"wayPoints\" : [ { \"_id\" : \"Nantes\", \"latitude\" : "
-//          + "47.21806, \"longitude\" : -1.55278 }, { \"_id\" : " 
-//          + "\"Special waypoint\", \"latitude\" : 48.390834, \"longitude\" : "
-//          + "-4.485556 } ] }";
-//  }
-  
   public static String standardTrackJSON() {
-    return "{ \"id\" : \"First track\"}";
+    return "{ \"id\" : \"First_track\", "
+        + "\"wayPoints\" : [ { \"id\" : \"Nantes\", \"latitude\" : "
+        + "47.21806, \"longitude\" : -1.55278 }, { \"id\" : "
+        + "\"Special_waypoint\", \"latitude\" : 48.390834, \"longitude\" : "
+        + "-4.485556 } ] }";
+  }
+  
+  public static String standardWaypointsJSON() {
+    return "[ { \"id\" : \"Nantes\", \"latitude\" : "
+        + "42.21806, \"longitude\" : -2.55278 }, { \"id\" : "
+        + "\"Special_waypoint\", \"latitude\" : 42.390834, \"longitude\" : "
+        + "-2.485556 } ]";
   }
   
   public static Track otherTrack() {
