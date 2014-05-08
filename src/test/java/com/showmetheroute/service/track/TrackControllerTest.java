@@ -43,7 +43,8 @@ public class TrackControllerTest {
     mockMvc.perform(get("/tracks")).andExpect(status().isOk());
   }
   
-  @Test void testCreateTrack() throws Exception {
+  @Test 
+  public void testCreateTrack() throws Exception {
     when(trackRepository.save(any(Track.class))).thenReturn(new Track());
     
     mockMvc.perform(post("/tracks").content(standardTrackJSON())
@@ -53,7 +54,8 @@ public class TrackControllerTest {
                     .andExpect(status().isCreated());
   }
   
-  @Test void testTrackCreationFails() throws Exception {
+  @Test 
+  public void testTrackCreationFails() throws Exception {
     when(trackRepository.save(any(Track.class))).thenReturn(null);
     
     mockMvc.perform(post("/tracks").content(standardTrackJSON())
@@ -100,7 +102,7 @@ public class TrackControllerTest {
   
   @Test
   public void testGetUnfoundTrackWaypoints() throws Exception {
-    when(trackRepository.findOne("TRACK_ID")).thenReturn(new Track());
+    when(trackRepository.findOne("TRACK_ID")).thenReturn(null);
     
     mockMvc.perform(get("/tracks/{id}/waypoints", "TRACK_ID")).andExpect(status().isNotFound());
   }
