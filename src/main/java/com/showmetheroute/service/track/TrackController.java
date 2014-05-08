@@ -50,6 +50,7 @@ public class TrackController {
       return new ResponseEntity<Track>(HttpStatus.NOT_FOUND);
     }
     
+    trackRepository.delete(id);
     return new ResponseEntity<Track>(track, HttpStatus.OK);
   }
   

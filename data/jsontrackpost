@@ -1,0 +1,16 @@
+{
+  "id":"track_id", 
+  "wayPoints":
+  [
+    {
+      "id":"wp1",
+      "latitude":47.21806,
+      "longitude":-1.55278
+    },
+    {
+      "id":"wp2",
+      "latitude":48.390834,
+      "longitude":-4.485556
+    }
+  ]
+}
