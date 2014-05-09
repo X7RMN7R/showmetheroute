@@ -1,8 +1,9 @@
+## Server side
 # Gradle repository
-.gradle/
+/server/.gradle/
 
 # Build directory
-build/
+/server/build/
 
 # Classes
 *.class
@@ -18,4 +19,8 @@ build/
 
 # gradle config
 gradle.properties
+
+## Client side
+# Node modules
+/client/node_modules/
 
