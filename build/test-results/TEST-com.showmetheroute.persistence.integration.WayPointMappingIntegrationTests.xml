@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.showmetheroute.persistence.integration.WayPointMappingIntegrationTests" tests="2" failures="0" errors="0" timestamp="2014-04-22T20:43:13" hostname="ubuntu" time="2.205">
+  <properties/>
+  <testcase name="thatPointCustomMappingWorks" classname="com.showmetheroute.persistence.integration.WayPointMappingIntegrationTests" time="2.139"/>
+  <testcase name="thatPointIsInsertedIntoCollectionHasCorrectIndexes" classname="com.showmetheroute.persistence.integration.WayPointMappingIntegrationTests" time="0.052"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

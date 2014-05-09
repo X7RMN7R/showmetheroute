@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.showmetheroute.persistence.integration.TrackMappingIntegrationTests" tests="1" failures="0" errors="0" timestamp="2014-05-08T08:00:41" hostname="ubuntu" time="0.278">
+  <properties/>
+  <testcase name="thatTrackIsInsertedIntoCollectionHasCorrectIndexes" classname="com.showmetheroute.persistence.integration.TrackMappingIntegrationTests" time="0.278"/>
+  <system-out><![CDATA[10:00:41.712 [Test worker] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[showmetheroute]
+10:00:41.715 [Test worker] DEBUG o.s.data.mongodb.core.MongoTemplate - Dropped collection [showmetheroute.track]
+10:00:41.717 [Test worker] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class interface java.util.List for index information.
+10:00:41.719 [Test worker] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.showmetheroute.persistence.domain.WayPoint for index information.
+10:00:41.719 [Test worker] DEBUG o.s.d.m.c.i.MongoPersistentEntityIndexCreator - Analyzing class class com.showmetheroute.persistence.domain.Track for index information.
+10:00:41.721 [Test worker] DEBUG o.s.data.mongodb.core.MongoTemplate - Inserting DBObject containing fields: [_class, _id, wayPoints] in collection: track
+10:00:41.735 [Test worker] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[showmetheroute]
+10:00:41.738 [Test worker] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[showmetheroute]
+10:00:41.922 [Test worker] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[showmetheroute]
+10:00:41.982 [Test worker] DEBUG o.s.data.mongodb.core.MongoDbUtils - Getting Mongo Database name=[showmetheroute]
+10:00:41.985 [Test worker] DEBUG o.s.data.mongodb.core.MongoTemplate - Dropped collection [showmetheroute.track]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
