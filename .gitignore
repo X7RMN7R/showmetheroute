@@ -23,4 +23,5 @@ gradle.properties
 ## Client side
 # Node modules
 /client/node_modules/
-
+# Bower components
+/client/bower_components/
