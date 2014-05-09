@@ -12,10 +12,10 @@
 *.jar
 *.war
 
-/bin/
-/.project
-/.classpath
-/.settings/
+/server/bin/
+/server/.project
+/server/.classpath
+/server/.settings/
 
 # gradle config
 gradle.properties
