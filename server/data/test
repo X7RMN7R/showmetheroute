@@ -3,3 +3,6 @@ db.track.insert({ "_id" : "First track", "_class" : "com.showmetheroute.persiste
 
 CURL POST
 curl -i -H "Content-Type: application/json" -d @jsontrackpost http://127.0.0.1:8080/tracks
+
+Igore PROXY
+curl --noproxy 127.0.0.1 -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://127.0.0.1:8080/tracks
