@@ -1,9 +1,14 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="smtr">
   <head>
     <title>Show me the route</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script src="tracks.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+    <script src="angular-leaflet-directive.min.js"></script>
+    <script src="mapExample.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
   </head>
 
   <body>
@@ -15,6 +20,10 @@
             {{w.id}}
           </div>
       </div>
+    </div>
+    <div ng-controller="MapExample">
+      <p>Map</p>
+      <leaflet width="640px" height="480px"></leaflet>
     </div>
   </body>
 </html>
